@@ -41,13 +41,18 @@ splitName.onclick = function() {
 //   $button.prop("disabled", (this.value === "")? true : false);
 // });
 // const card = document.querySelector("#result");
-const textarea = document.querySelector("textarea");
-const clear = document.querySelector("#clear");
+// const textarea = document.querySelector("textarea");
+// const clear = document.querySelector("#clear");
 
-clear.addEventListener("click", () => {
-    textarea.value = "";
-    textarea.focus();
-  });
+// clear.addEventListener("click", () => {
+//     textarea.value = "";
+//     textarea.focus();
+//   });
+
+function ClearFields() {
+     document.getElementById("fullName").value = "";
+     document.getElementById("result").innerHTML = "";
+}
 
   function copyToClipboard(id) {
     var from = document.getElementById(id);
