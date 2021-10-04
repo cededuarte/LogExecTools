@@ -110,6 +110,7 @@ html {
     height: 400px;
     background: transparent;
     resize: none;
+    border-color: #014572;
   }
 
   .duplicatecheckercard {
@@ -209,6 +210,8 @@ html {
     bottom: 0;
     width: 50%;
     padding-left: 4px;
+        color: #014572;
+    font-weight: 300;
   }
   
   
@@ -226,3 +229,54 @@ html {
       opacity: 1;
     }
   }
+
+h2{text-align: center; color: #014572; font-size: 30px; float: left; width: 100%; margin: 30px 0; position: relative; line-height: 50px; font-weight: 600;}
+h2:before{content: ""; position: absolute; left: 50%; bottom: 0; width: 100px; height: 2px; background-color: #2079df; margin-left: -50px;}
+
+
+
+#navigation {
+
+  background-color: #014572;
+}
+
+
+.btn {
+
+  background-color: #00c4de;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #00c4de;
+  /*border-radius: 5px 5px;*/
+  vertical-align: top;
+ /* width: 70px;
+  height: 40px;*/
+  font-weight: 500;
+  color:  white;
+
+}
+
+
+.btn:hover{
+
+  background-color: #014572;
+  border-color: #014572;
+  color: white;
+
+}
+
+.btn:active{
+
+  background-color: #014572;
+  border-color: #014572;
+  color: white;
+
+}
+
+
+
+hr {
+border: 2px solid #014572; 
+border-radius: 5px;
+} 

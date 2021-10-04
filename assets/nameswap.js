@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 var splitName = document.getElementById("splitName");
 splitName.onclick = function() {
   document.getElementById("result").innerHTML = '';
@@ -18,15 +25,34 @@ splitName.onclick = function() {
     }
 
 
-		/* For Name swap */
-/*   document.getElementById("result").innerHTML += lastname + ", " + firstname+ "<br>";
-      console.log(ced); */
-var ced = document.getElementById("result").innerHTML += [lastname, firstname].filter(Boolean).join(", ") + " <br> ";
-  /*   console.log(ced); */
+var trimName = document.getElementById("trimName");
+trimName.onclick = function() {
+  document.getElementById("result").innerHTML = '';
+  var value = document.getElementById("fullName").value;
+  value.split('\n').forEach(fullname => {
+   /*  console.log(fullname); */
 
-  		/* For sixshooters */
-/* 			document.getElementById("result").innerHTML += "Round # Sixshooter (Tournament Name YYYY):" + lastname + ", " + firstname[0] + " / "; */
-   
+    var spaceIndex = fullname.indexOf(" ");
+    var firstname;
+    var lastname;
+    if (spaceIndex == -1) {
+      lastname = fullname;
+      lastname = "";
+    } else {
+      firstname = fullname.substring(0, spaceIndex);
+      lastname = fullname.substr(spaceIndex + 1);       
+    }
+
+      document.getElementById("result").innerHTML += lastname + ", " + firstname[0];
+
+  
+  });
+};
+
+
+
+document.getElementById("result").innerHTML += [lastname, firstname].filter(Boolean).join(", ") + " <br> ";
+
     
   
   });

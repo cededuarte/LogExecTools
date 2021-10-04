@@ -34,12 +34,12 @@ splitName.onclick = function() {
 };
 
 
-// var $button = $("button");
-// $button.prop("disabled", true);
+var $button = $("button");
+$button.prop("disabled", true);
 
-// $("#fullName").keyup(function(){
-//   $button.prop("disabled", (this.value === "")? true : false);
-// });
+$("#fullName").keyup(function(){
+  $button.prop("disabled", (this.value === "")? true : false);
+});
 // const card = document.querySelector("#result");
 // const textarea = document.querySelector("textarea");
 // const clear = document.querySelector("#clear");

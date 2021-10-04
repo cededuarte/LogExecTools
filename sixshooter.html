@@ -14,7 +14,7 @@
 <body>
 <!-- partial:index.partial.html -->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <nav class="navbar navbar-expand-lg navbar-dark" id="navigation">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Logistics Execution</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,13 +27,18 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./nameswap.html">Flip Names</a>
+                <a class="nav-link" href="./agecalculator.html">Age Calculator
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./nameswap.html">Flip/Trim Names</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./sixshooter.html">Six Shooter/Groups</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./boxinglabel.html">Boxing Label</a>
+                <a class="nav-link" href="./boxinglabel.html">Boxing Labels</a>
               </li>
             </ul>
 
@@ -46,17 +51,17 @@
 <main>
 <div class="container">
     <div class="row">
-        <h2 class="pt-5">Six Shooter / Groups Appender (first name-last name format)</h2>
+        <h2 class="pt-5">Six Shooter / Groups Appender</h2>
         <div>
             <button onClick="copyToClipboard('result')" class="btn btn-info btn-lg float-end">Copy</button>
-            <button id="clear" class="btn btn-warning btn-lg" onclick="ClearFields()";>Clear</button>
-            <button id="splitName" class="btn btn-danger btn-lg">Append</button>
+            <button id="clear" class="btn btn-lg" onclick="ClearFields()";>Clear</button>
+            <button id="splitName" class="btn btn-lg">Append</button>
         </div>
         <div><hr></div>
     
         <div class="col-lg-6">
                 <div id="text">
-                <textarea placeholder="Paste here..." id="fullName"></textarea>    
+                <textarea placeholder="First Name Last Name" id="fullName"></textarea>    
                 </div>
         </div>
         <div class="card col-lg-6" >    
@@ -71,7 +76,7 @@
 </div>
 </div>
 </main>
-  <footer class="fixed-bottom">Created by CED</footer>
+  <footer class="fixed-bottom">Created by CED ©</footer>
 
 
   <script  src="./assets/sixshooter.js"></script>
