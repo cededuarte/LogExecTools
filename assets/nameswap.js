@@ -25,6 +25,20 @@ splitName.onclick = function() {
     }
 
 
+
+
+
+document.getElementById("result").innerHTML += [lastname, firstname].filter(Boolean).join(", ") + " <br> ";
+
+    
+  
+  });
+};
+
+
+
+
+
 var trimName = document.getElementById("trimName");
 trimName.onclick = function() {
   document.getElementById("result").innerHTML = '';
@@ -48,17 +62,6 @@ trimName.onclick = function() {
   
   });
 };
-
-
-
-document.getElementById("result").innerHTML += [lastname, firstname].filter(Boolean).join(", ") + " <br> ";
-
-    
-  
-  });
-};
-
-
 // var $button = $("button");
 // $button.prop("disabled", true);
 
