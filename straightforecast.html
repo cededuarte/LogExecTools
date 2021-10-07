@@ -8,6 +8,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
   rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link rel='stylesheet'><link rel="stylesheet" href="./assets/nameswap.css">
+<script src="https://kit.fontawesome.com/8c708e284b.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 <!-- <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.css"> -->
 
 </head>
@@ -38,6 +41,9 @@
                 <a class="nav-link" href="./sixshooter.html">Six Shooter/Groups</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="./straightforecast.html">SFC/EDC</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="./boxinglabel.html">Boxing Labels</a>
               </li>
             </ul>
@@ -51,6 +57,7 @@
 <main>
 <div class="container">
     <div class="row">
+          <!-- <h2 class="mb-0 mt-2 pb-0 pt-5">GOLF</h2> -->
         <h2 class="pt-5">Straight Forecast / Enchanced Double Chance</h2>
         <div>
       <button onClick="copyToClipboard('outcome')" class="btn btn-info btn-lg float-end">Copy</button>
@@ -60,16 +67,16 @@
         <div><hr></div>
     
         <div class="col-lg-6">
-				<div class="text-input">
+				<div class="input_fields_wrap">
+              <button class="add_field_button btn btn-md float-end mb-2 mx-5">Add field</button><br>
 				<form>
         <!-- <input type="text" id="string" placeholder="Last Name, First Name"> -->
-
-        <input type="text" id="input1" placeholder="Participant 1"/>
-        <input type="text" id="input2" placeholder="Participant 2"/>
-        <input type="text" id="input3" placeholder="Participant 3" />
-        <input type="text" id="input4" placeholder="Participant 4" />
-        <input type="text" id="input5" placeholder="Participant 5"/>
-        <input type="text" id="input6" placeholder="Participant 6"/>
+          <input placeholder="Last Name, F..." type="text" name="mytext[]"/>
+          <input placeholder="Last Name, F..." type="text" name="mytext[]"/>
+          <input placeholder="Last Name, F..." type="text" name="mytext[]"/>
+          <input placeholder="Last Name, F..." type="text" name="mytext[]"/>
+         <!-- <input placeholder="Last Name, F..." type="text" name="mytext[]"/> -->
+          <!-- <input placeholder="Last Name, F..." type="text" name="mytext[]"/>  -->
 
 				</form>
 				</div>     
