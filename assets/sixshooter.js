@@ -1,6 +1,7 @@
 var splitName = document.getElementById("splitName");
 splitName.onclick = function() {
   document.getElementById("result").innerHTML = '';
+  document.getElementById("result2").innerHTML = '';
   var value = document.getElementById("fullName").value;
   value.split('\n').forEach(fullname => {
    
@@ -8,7 +9,7 @@ splitName.onclick = function() {
     var spaceIndex = fullname.indexOf(" ");
     var firstname;
     var lastname;
-    var six = "Round # Sixshooter (Tournament Name YYYY):";
+
 
     if (spaceIndex == -1) {
       lastname = fullname;
@@ -19,16 +20,19 @@ splitName.onclick = function() {
     }
 
 
-		/* For Name swap */
-/*   document.getElementById("result").innerHTML += lastname + ", " + firstname+ "<br>";
-      console.log(ced); */
-// var ced = document.getElementById("result").innerHTML += [lastname, firstname[0]].filter(Boolean).join(", ") + " <br> ";
-  /*   console.log(ced); */
 
-  		/* For sixshooters */
- 			document.getElementById("result").innerHTML += lastname + ", " + firstname[0] + " / "; 
-   
-    
+ 			// document.getElementById("result").innerHTML += lastname + ", " + firstname[0] + " / "; 
+    let str = document.getElementById("result").innerHTML += [lastname, firstname[0]].filter(Boolean).join(", ") + " / ";
+  
+      str = str.slice(0, -3); 
+      document.getElementById("result2").innerHTML = str;
+
+
+
+
+
+
+
   
   });
 };
