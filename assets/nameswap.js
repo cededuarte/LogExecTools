@@ -57,7 +57,7 @@ trimName.onclick = function() {
       lastname = fullname.substr(spaceIndex + 1);       
     }
 
-      document.getElementById("result").innerHTML += lastname + ", " + firstname[0];
+      document.getElementById("result").innerHTML += lastname + ", " + firstname[0]+ " <br> ";
 
   
   });
