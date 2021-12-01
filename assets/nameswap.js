@@ -78,19 +78,20 @@ trimName.onclick = function() {
 
 
 var caseConvert = document.getElementById("caseConvert");
+
 caseConvert.onclick = function() {
   document.getElementById("result").innerHTML = '';
-  var value = document.getElementById("fullName").value;
-     
+
+      var value = document.getElementById("fullName").value;
+  
+  
   //CASE CONVERT//
       var value2 = value.toLowerCase();
       value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
-  
 
+    
 
-  value2.split('\n').forEach(fullname => {
- 
-
+    value2.split('\n').forEach(fullname => {
     var spaceIndex = fullname.indexOf(" ");
     var firstname;
     var lastname;
@@ -102,11 +103,17 @@ caseConvert.onclick = function() {
       lastname = fullname.substr(spaceIndex + 1);       
     }
 
-      document.getElementById("result").innerHTML += lastname + ", " + firstname[0]+ " <br> ";
+    document.getElementById("result").innerHTML += firstname + " " + lastname+ "<br>";
+         
 
-  
+
   });
 };
+
+
+
+
+
 
 
 
