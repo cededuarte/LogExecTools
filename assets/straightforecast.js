@@ -24,7 +24,7 @@ function straightForecast() {
    for (let i = 0; i < inputs.length; i++) {
        for (let j = 0; j < inputs.length; j++) {
            if (i === j) continue;
-           result += '1. ' + inputs[i].value + ' / 2. ' + inputs[j].value + '<br>';
+           result += '1. ' + inputs[i].value + '/2. ' + inputs[j].value + '<br>';
        }
    }
    
