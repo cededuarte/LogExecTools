@@ -6,8 +6,8 @@ splitName.onclick = function() {
 
   //CASE CONVERT//
       var value2 = value.toLowerCase();
-      value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
-  
+      // value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
+    value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
       value2.split('\n').forEach(fullname => {
 
     var spaceIndex = fullname.indexOf(" ");

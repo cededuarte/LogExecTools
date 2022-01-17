@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <title>Participant Formatter</title>
+  <title>International Participants Formatter</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
   rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link rel='stylesheet'><link rel="stylesheet" href="./assets/nameswap.css">
@@ -53,20 +53,24 @@
 <main>
 <div class="container">
     <div class="row">
-        <h2 class="pt-5">Participant Formatter</h2>
+        <h2 class="pt-5">International Participants Formatter</h2>
         <div>
             <button onClick="copyToClipboard('result')" class="btn btn-info btn-lg float-end">Copy</button>
             <button id="clear" class="btn mr-5 btn-lg"onclick="ClearFields()";>Clear</button>
-            <button id="splitName" class="btn btn-lg">Flip</button>
-            <button id="trimName" class="btn btn-lg">Trim</button>
-            <button id="caseConvert" class="btn btn-lg">Convert Case</button>
+            <button id="splitName" class="btn btn-lg">Append</button>
+<!--             <button id="trimName" class="btn btn-lg">Trim</button>
+            <button id="caseConvert" class="btn btn-lg">Convert Case</button> -->
         </div>
         <div><hr></div>
     
         <div class="col-lg-6">
-                <div id="text">
-                <textarea placeholder="Paste here..." id="fullName"></textarea>    
-                </div>
+        	<div>
+  				<input type="text" id="countryName" placeholder="Country name/code" class="mx-3">
+			</div>
+			<br>
+             <div id="text">
+                <textarea placeholder="Last Name, First Name" id="fullName" class="px-2"></textarea>    
+            </div>
         </div>
         <div class="card col-lg-6" >    
             <!-- <div class="card-body"id="result"> -->
@@ -83,6 +87,6 @@
   <footer class="fixed-bottom">Created by CED ©</footer>
 
 
-  <script  src="./assets/nameswap.js"></script>
+  <script  src="./assets/internationalsformatter.js"></script>
 </body>
 </html>
