@@ -113,88 +113,47 @@ caseConvert.onclick = function() {
   });
 };
 
-// var emctCleaner = document.getElementById("emctCleaner");
-
-// emctCleaner.onclick = function() {
-//   document.getElementById("result").innerHTML = '';
-// document.getElementById("result2").innerHTML = '';
-//       var value = document.getElementById("fullName").value;
-  
-  
-//   //CASE CONVERT//
-//       var value2 = value.toLowerCase();
-//       // value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
-//        value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
-
-    
-
-//     value2.split('\n').forEach(fullname => {
-//     var spaceIndex = fullname.indexOf(" ");
-//     var firstname;
-//     var lastname;
-//     if (spaceIndex == -1) {
-//       lastname = fullname;
-//       lastname = "";
-//     } else {
-//       firstname = fullname.substring(0, spaceIndex);
-//       lastname = fullname.substr(spaceIndex + 1);       
-//     }
-
-//     let str = document.getElementById("result").innerHTML += firstname + " " + lastname+ "<br>";
-//     str = str.splice(0, 9); 
-//     document.getElementById("result2").innerHTML = str;
 
 
-//   });
-// };
+//Tennis Doubles
 
+var fixName = document.getElementById("fixName");
 
-
-var emctCleaner = document.getElementById("emctCleaner");
-emctCleaner.onclick = function() {
+fixName.onclick = function() {
   document.getElementById("result").innerHTML = '';
-document.getElementById("result2").innerHTML = '';
-      var value = document.getElementById("fullName").value;
 
+  		var value = document.getElementById("fullName").value;
+  
+  
   //CASE CONVERT//
-      var value2 = value.toLowerCase();
-      // value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
+		var value2 = value.toLowerCase();
     value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
-      value2.split('\n').forEach(fullname => {
+		
 
-    var spaceIndex = fullname.indexOf(" ");
+  	value2.split('\n').forEach(fullname => {
+    var spaceIndex = fullname.indexOf(" / ");
     var firstname;
     var lastname;
-
-
+		var comma = ",";
+    var insertAt = -2;
     if (spaceIndex == -1) {
       lastname = fullname;
       lastname = "";
     } else {
-      firstname = fullname.substring(0, spaceIndex);
-      lastname = fullname.substr(spaceIndex + 1);       
+      lastname = fullname.substring(0, spaceIndex);
+      firstname = fullname.substr(spaceIndex + 3);      
+      
     }
 
+    
+var lastNameFinal = [lastname.slice(0, insertAt), comma, lastname.slice(insertAt)].join('');
+var firstnameFinal = [firstname.slice(0, insertAt), comma, firstname.slice(insertAt)].join('');
 
+document.getElementById("result").innerHTML += lastNameFinal+ "/" + firstnameFinal + "<br>";
+/* console.log(firstnameFinal); */
 
-      // document.getElementById("result").innerHTML += lastname + ", " + firstname[0] + " / "; 
-    let str = document.getElementById("result").innerHTML += [firstname, lastname.filter(Boolean) + "<br>";
-      str = str.slice(0, 9); 
-      document.getElementById("result2").innerHTML = str;
-
-
-
-
-
-
-
-  
   });
 };
-
-
-
-
 
 
 
