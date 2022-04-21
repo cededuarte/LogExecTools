@@ -113,7 +113,84 @@ caseConvert.onclick = function() {
   });
 };
 
+// var emctCleaner = document.getElementById("emctCleaner");
 
+// emctCleaner.onclick = function() {
+//   document.getElementById("result").innerHTML = '';
+// document.getElementById("result2").innerHTML = '';
+//       var value = document.getElementById("fullName").value;
+  
+  
+//   //CASE CONVERT//
+//       var value2 = value.toLowerCase();
+//       // value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
+//        value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
+
+    
+
+//     value2.split('\n').forEach(fullname => {
+//     var spaceIndex = fullname.indexOf(" ");
+//     var firstname;
+//     var lastname;
+//     if (spaceIndex == -1) {
+//       lastname = fullname;
+//       lastname = "";
+//     } else {
+//       firstname = fullname.substring(0, spaceIndex);
+//       lastname = fullname.substr(spaceIndex + 1);       
+//     }
+
+//     let str = document.getElementById("result").innerHTML += firstname + " " + lastname+ "<br>";
+//     str = str.splice(0, 9); 
+//     document.getElementById("result2").innerHTML = str;
+
+
+//   });
+// };
+
+
+
+var emctCleaner = document.getElementById("emctCleaner");
+emctCleaner.onclick = function() {
+  document.getElementById("result").innerHTML = '';
+document.getElementById("result2").innerHTML = '';
+      var value = document.getElementById("fullName").value;
+
+  //CASE CONVERT//
+      var value2 = value.toLowerCase();
+      // value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
+    value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
+      value2.split('\n').forEach(fullname => {
+
+    var spaceIndex = fullname.indexOf(" ");
+    var firstname;
+    var lastname;
+
+
+    if (spaceIndex == -1) {
+      lastname = fullname;
+      lastname = "";
+    } else {
+      firstname = fullname.substring(0, spaceIndex);
+      lastname = fullname.substr(spaceIndex + 1);       
+    }
+
+
+
+      // document.getElementById("result").innerHTML += lastname + ", " + firstname[0] + " / "; 
+    let str = document.getElementById("result").innerHTML += [firstname, lastname.filter(Boolean) + "<br>";
+      str = str.slice(0, 9); 
+      document.getElementById("result2").innerHTML = str;
+
+
+
+
+
+
+
+  
+  });
+};
 
 
 
