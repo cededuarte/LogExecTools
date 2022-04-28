@@ -15,8 +15,8 @@ splitName.onclick = function() {
 
 	value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
 
-
-  value2.split('\n').forEach(fullname => {
+  var value3 =value2.trim();
+  value3.split('\n').forEach(fullname => {
     var spaceIndex = fullname.indexOf(" ");
     var firstname;
     var lastname;
