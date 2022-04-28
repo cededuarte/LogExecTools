@@ -14,11 +14,10 @@ splitName.onclick = function() {
   //CASE CONVERT//
       var value2 = value.toLowerCase();
       // value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
-          value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
-  
-      value2.split('\n').forEach(fullname => {
+      value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
+      var value3 =value2.trim();
+      value3.split('\n').forEach(fullname => {
    
-
     var spaceIndex = fullname.indexOf(" ");
     var firstname;
     var lastname;
@@ -56,11 +55,8 @@ trimName.onclick = function() {
       // value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
        value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
   
-
-
-  value2.split('\n').forEach(fullname => {
-
-
+       var value3 = value2.trim();
+       value3.split('\n').forEach(fullname => {
     var spaceIndex = fullname.indexOf(" ");
     var firstname;
     var lastname;
@@ -92,9 +88,9 @@ caseConvert.onclick = function() {
       // value2 = value2.replace(/\b./g, function(m){ return m.toUpperCase(); });
        value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
 
-    
+      var value3 = value2.trim();
 
-    value2.split('\n').forEach(fullname => {
+      value3.split('\n').forEach(fullname => {
     var spaceIndex = fullname.indexOf(" ");
     var firstname;
     var lastname;
@@ -117,44 +113,57 @@ caseConvert.onclick = function() {
 
 //Tennis Doubles
 
+
 var fixName = document.getElementById("fixName");
 
 fixName.onclick = function() {
   document.getElementById("result").innerHTML = '';
 
-  		var value = document.getElementById("fullName").value;
-  
-  
-  //CASE CONVERT//
-		var value2 = value.toLowerCase();
-    value2 = value2.replace(/(^\w|\s\w)/g, function(m){ return m.toUpperCase(); });
-		
+  var value = document.getElementById("fullName").value;
 
-  	value2.split('\n').forEach(fullname => {
+
+  //CASE CONVERT//
+  var value2 = value.toLowerCase();
+  value2 = value2.replace(/(^\w|\s\w)/g, function(m) {
+    return m.toUpperCase();
+  });
+  
+ var value3 =value2.trim();
+ value3.split('\n').forEach(fullname => {
     var spaceIndex = fullname.indexOf(" / ");
     var firstname;
     var lastname;
-		var comma = ",";
+    var comma = ",";
     var insertAt = -2;
     if (spaceIndex == -1) {
       lastname = fullname;
       lastname = "";
     } else {
       lastname = fullname.substring(0, spaceIndex);
-      firstname = fullname.substr(spaceIndex + 3);      
+      firstname = fullname.substr(spaceIndex + 3);
+
+
+      var spaceIndex2 = firstname.indexOf(" ");
+      var spaceIndex3 = lastname.indexOf(" ");
+      var slicedFirst;
+      var slicedInitialFirst;
+      var slicedLast;
+      var slicedInitialLast;
+
+      slicedFirst = firstname.substring(0, spaceIndex2);
+      slicedInitialFirst = firstname.substr(spaceIndex2);
+      slicedLast = lastname.substring(0, spaceIndex3);
+      slicedInitialLast = lastname.substr(spaceIndex3);     
+         
       
-    }
-
+		var firstNameSliced = slicedFirst+", "+slicedInitialFirst;
+    var lastNameSliced = slicedLast+", "+slicedInitialLast;
     
-var lastNameFinal = [lastname.slice(0, insertAt), comma, lastname.slice(insertAt)].join('');
-var firstnameFinal = [firstname.slice(0, insertAt), comma, firstname.slice(insertAt)].join('');
 
-document.getElementById("result").innerHTML += lastNameFinal+ "/" + firstnameFinal + "<br>";
-/* console.log(firstnameFinal); */
-
+    document.getElementById("result").innerHTML += lastNameSliced + "/" + firstNameSliced + "<br>";
+   }
   });
 };
-
 
 
 
